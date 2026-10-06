@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --portfolio-black: #070608;
+    --portfolio-burgundy: #5A0B1B;
+    --portfolio-crimson: #B11226;
+    --portfolio-wine: #2A0710;
+    --portfolio-ivory: #F7F2F3;
+    --font-display: 'Sora', 'Manrope', sans-serif;
+    --font-body: 'Manrope', sans-serif;
+    --font-mono: 'Space Grotesk', monospace;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: #070608;
+    color: #F7F2F3;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-display, .font-syne {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+
+  .font-outfit {
+    font-family: 'Outfit', sans-serif;
+  }
+
+  .font-space {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  code, pre, .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+/* Custom scrollbar with burgundy accent */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #08070B;
+}
+::-webkit-scrollbar-thumb {
+  background: #2D1420;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #4C1D34;
+}
+
+/* Text outline effects like the reference video */
+.text-stroke {
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.25);
+  color: transparent;
+  transition: all 0.3s ease;
+}
+
+.text-stroke:hover, .text-stroke-active {
+  -webkit-text-stroke: 1.5px #ffffff;
+  color: rgba(255, 255, 255, 0.05);
+}
+
+.text-stroke-subtle {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.15);
+  color: transparent;
+}
+
+/* Marquee infinite animation */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: 200%;
+  animation: marquee 25s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(2deg); }
+}
+
+.animate-float {
+  animation: float-slow 5s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.05); }
+}
+
+.animate-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}

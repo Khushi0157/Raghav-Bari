@@ -1,0 +1,8 @@
+{
+  "name": "Remix Raghav Bari - Video Editor Portfolio",
+  "description": "Portfolio of Raghav Bari, specializing in SaaS motion design, explainer videos, and high-engagement editing.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
